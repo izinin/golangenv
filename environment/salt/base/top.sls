@@ -1,0 +1,4 @@
+base:
+  '*':
+    - git
+    - golang-env
