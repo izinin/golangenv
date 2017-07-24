@@ -2,17 +2,6 @@
 {% set workdir = salt.pillar.get('gowsdir') %}
 {% set source_code_dir = salt.pillar.get('projsources') %}
 
-common dependecies:
-  pkg.installed:
-    - skip_verify: True
-    - skip_suggestions: True
-    - refresh: True
-    - allow_updates: True
-    - pkgs: 
-      - build-essential
-      - curl
-      - git
-
 Download glide:
   file.managed:
     - source: https://github.com/Masterminds/glide/releases/download/v0.12.3/glide-v0.12.3-linux-amd64.tar.gz
